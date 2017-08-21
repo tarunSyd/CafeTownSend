@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name = "Automation Test">
+
+<test name = "Regression Test Cases">
+
+   <classes>   
+	   <class name="TestPlans.Login">
+	   <methods>
+       <include name="Login"/>
+	   </methods>
+       </class>
+
+    </classes>
+</test>
+</suite>

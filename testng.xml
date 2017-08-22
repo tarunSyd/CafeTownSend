@@ -9,6 +9,11 @@
        <include name="Login"/>
 	   </methods>
        </class>
+       <class name="TestPlans.ManageUser">
+	   <methods>
+       <include name="CreateNewUser"/>
+	   </methods>
+       </class>
 
     </classes>
 </test>

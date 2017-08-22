@@ -178,6 +178,28 @@ public static boolean IsElementDisplayed(WebElement webElement) throws Interrupt
 	  }
  }
  
-
+ public static List<WebElement> getTableListElements (WebElement webElement, WebDriver driver){
+		List<WebElement> ListOfElements=null;
+		try{
+		
+		waitUntilClickable(webElement);	
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		for(int i=0; i<10; i++)
+		{
+		 js.executeScript("scrollBy(0, 2500)");
+		}
+		ListOfElements=webElement.findElements(By.tagName("li"));
+		
+		
+		}
+		catch(Exception e){
+			String[] e1=e.getMessage().split("}");
+			//commonMethods.xmlFile.write("<results>"+"<Title>"+"WebElement Name:  "+webElement.getAttribute("name")+"  TextBox"+"</Title>"+"<MethodName>"+e.getStackTrace()[2].getMethodName()+"()"+"</MethodName>"+"<Exception>"+e1[0]+"</Exception>"+"<PassFail>Fail</PassFail>"+"</results>");	
+			
+		}
+		return ListOfElements;
+		
+	}
+ 
 
 }

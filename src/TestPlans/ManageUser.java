@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -15,6 +16,8 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+
+import ObjectRepository.CreatePage;
 import ObjectRepository.Driver;
 import ObjectRepository.HomePage;
 import ObjectRepository.LoginPage;
@@ -34,9 +37,11 @@ public class ManageUser {
 	}
 	
 	@Test(dataProvider="CafeData", dataProviderClass=DataProviderSource.class)
-	public void CreateNewUser(String userName, String pwd, String browser, String url, String email, String DOB, String runFlag) throws IOException, InterruptedException
+	public void CreateNewUser(String userName, String pwd, String browser, String url, String email, String runFlag) throws IOException, InterruptedException
 	{
-		test = report.startTest("Login into cafe Townsend site --" + browser); 		
+		test = report.startTest("Create new user for Cafe Townsend site --" + browser);
+		test.log(LogStatus.INFO, "This Testcase login into cafe Townsend site and create new user and"
+				+ "once created successfully. It checks in list of employees and if not found test fail else test pass");	
 		WebDriver driver = Driver.BrowserName(browser);
 		driver.manage().window().maximize();
 		test.log(LogStatus.INFO, "Windows maximised");
@@ -52,9 +57,22 @@ public class ManageUser {
 		login.ClickLogin().click();
 		HomePage home = new HomePage(driver);
 		Thread.sleep(3000);
-		Assert.assertFalse(commonMethods.IsElementDisplayed(login.InValidUserPasswordMessage()), "xxxUnable to Login into Cafe Townsend site....Login Failed");
+		Assert.assertFalse(commonMethods.IsElementDisplayed(login.InValidUserPasswordMessage()), "Unable to Login into Cafe Townsend site....Login Failed");
 		Assert.assertTrue(commonMethods.IsElementDisplayed(home.LogOut()), "Unable to Login into Cafe Townsend site....Login Failed");
 		test.log(LogStatus.PASS, "User login into Cafe Townsend site successfully");
+		commonMethods.waitUntilClickable(home.AddNewUser());
+		home.AddNewUser().click();
+		CreatePage create = new CreatePage(driver);
+		String fName = "Tarun -"+commonMethods.GetCurrentDateTime();
+		commonMethods.waitUntilClickable(create.FirstName());
+		create.FirstName().sendKeys(fName);
+		create.LastName().sendKeys("Bansal -"+commonMethods.GetCurrentDateTime());
+		create.StartDate().sendKeys("2017-08-21");
+		create.Email().sendKeys(email);
+		create.AddUser().click();
+		Thread.sleep(15000);
+		Assert.assertTrue(home.CheckEmployeeInList(fName), "Employee not create and not showing in list");
+		test.log(LogStatus.PASS, "Employee created successfully");
 		home.LogOut().click();
 		Assert.assertTrue(commonMethods.IsElementDisplayed(login.EnterUserName()), "Unable to logout of Cafe Townsend site....Logout Failed");
 		test.log(LogStatus.PASS, "User Logout of Cafe Townsend site successfully");

@@ -26,7 +26,9 @@ public class HomePage {
 	@FindBy(xpath="html/body/div[1]/header/div/p[1]")
 	WebElement logOut;
 	@FindBy(xpath=".//*[@id='bAdd']")
-	WebElement addNewUser; 
+	WebElement addNewUser;
+	@FindBy(xpath=".//*[@id='employee-list']")
+	WebElement employeeList; 
 
 	
 	
@@ -40,5 +42,27 @@ public class HomePage {
 	{
 		return addNewUser;
 	} 
-
+	public boolean CheckEmployeeInList(String content)
+	{
+		boolean value = false;
+		try{                                                             
+		List<WebElement> elements = driver.findElements(By.cssSelector(".ng-scope.ng-binding"));//span[class='item-info-title ng-binding']
+		for (WebElement element : elements){
+      	  if(element.getText().contains(content)) {
+      		  return true;
+      	  }
+		 }
+		}
+	      catch(NoSuchElementException e)
+			{
+				String[] e1=e.getMessage().split("}");
+				System.out.println(e1);
+			}  
+			return value;
+	} 
+	
+	public WebElement EmployeeList()
+	{
+		return employeeList;
+	} 
 }

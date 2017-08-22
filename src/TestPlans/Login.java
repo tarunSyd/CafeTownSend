@@ -34,9 +34,11 @@ public class Login {
 	}
 	
 	@Test(dataProvider="CafeData", dataProviderClass=DataProviderSource.class)
-	public void LoginLogoutCafeTown(String userName, String pwd, String browser, String url, String email, String DOB, String runFlag) throws IOException, InterruptedException
+	public void LoginLogoutCafeTown(String userName, String pwd, String browser, String url, String email, String runFlag) throws IOException, InterruptedException
 	{
-		test = report.startTest("Login into cafe Townsend site --" + browser); 		
+		test = report.startTest("Login And Logout Success Check in Cafe Townsend site --" + browser);
+		test.log(LogStatus.INFO, "This Testcase checks that user logged into system successfully "
+				+ "and if not then fail test and terminate test");
 		WebDriver driver = Driver.BrowserName(browser);
 		driver.manage().window().maximize();
 		test.log(LogStatus.INFO, "Windows maximised");
@@ -52,7 +54,7 @@ public class Login {
 		login.ClickLogin().click();
 		HomePage home = new HomePage(driver);
 		Thread.sleep(3000);
-		Assert.assertFalse(commonMethods.IsElementDisplayed(login.InValidUserPasswordMessage()), "xxxUnable to Login into Cafe Townsend site....Login Failed");
+		Assert.assertFalse(commonMethods.IsElementDisplayed(login.InValidUserPasswordMessage()), "Unable to Login into Cafe Townsend site....Login Failed");
 		Assert.assertTrue(commonMethods.IsElementDisplayed(home.LogOut()), "Unable to Login into Cafe Townsend site....Login Failed");
 		test.log(LogStatus.PASS, "User login into Cafe Townsend site successfully");
 		home.LogOut().click();
@@ -61,9 +63,11 @@ public class Login {
 	}	
 	
 	@Test(dataProvider="CafeData", dataProviderClass=DataProviderSource.class)
-	public void InvalidUserPassword(String userName, String pwd, String browser, String url, String email, String DOB, String runFlag) throws IOException, InterruptedException
+	public void InvalidUserPassword(String userName, String pwd, String browser, String url, String email, String runFlag) throws IOException, InterruptedException
 	{
-		test = report.startTest("Login into cafe Townsend site --" + browser); 		
+		test = report.startTest("Invalid User And Password Check (Negative Scenario) --" + browser);
+		test.log(LogStatus.INFO, "This Testcase checks that user login into system unsuccessful "
+			+ " and if yes then Pass test case and terminate test");		
 		WebDriver driver = Driver.BrowserName(browser);
 		driver.manage().window().maximize();
 		test.log(LogStatus.INFO, "Windows maximised");

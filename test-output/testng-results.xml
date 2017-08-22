@@ -1,17 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="2" passed="1">
+<testng-results skipped="0" failed="4" total="9" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="93425" started-at="2017-08-21T02:24:59Z" finished-at="2017-08-21T02:26:32Z">
+  <suite name="Automation Test" duration-ms="519595" started-at="2017-08-21T06:40:50Z" finished-at="2017-08-21T06:49:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="93425" started-at="2017-08-21T02:24:59Z" finished-at="2017-08-21T02:26:32Z">
-      <class name="TestPlans.Login">
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:TestPlans.Login@22f71333]" name="BeforeClass" is-config="true" duration-ms="596" started-at="2017-08-21T12:24:59Z" finished-at="2017-08-21T12:24:59Z">
+    <test name="Regression Test Cases" duration-ms="519595" started-at="2017-08-21T06:40:50Z" finished-at="2017-08-21T06:49:30Z">
+      <class name="TestPlans.ManageUser">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:TestPlans.ManageUser@1a407d53]" name="BeforeClass" is-config="true" duration-ms="270" started-at="2017-08-21T16:45:06Z" finished-at="2017-08-21T16:45:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="FAIL" signature="InvalidUserPassword(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.Login@22f71333]" name="InvalidUserPassword" duration-ms="27441" started-at="2017-08-21T12:25:00Z" data-provider="CafeData" finished-at="2017-08-21T12:25:27Z">
+        <test-method status="PASS" signature="CreateNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.ManageUser@1a407d53]" name="CreateNewUser" duration-ms="136493" started-at="2017-08-21T16:45:06Z" data-provider="CafeData" finished-at="2017-08-21T16:47:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Luke]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Skywalker]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://cafetownsend-angular-rails.herokuapp.com/login]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test@test.com.au]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Y]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNewUser -->
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult)[pri:0, instance:TestPlans.ManageUser@1a407d53]" name="TearDown" is-config="true" duration-ms="2048" started-at="2017-08-21T16:47:23Z" finished-at="2017-08-21T16:47:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateNewUser status=SUCCESS method=ManageUser.CreateNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.ManageUser@1a407d53] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method status="PASS" signature="CreateNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.ManageUser@1a407d53]" name="CreateNewUser" duration-ms="91361" started-at="2017-08-21T16:47:25Z" data-provider="CafeData" finished-at="2017-08-21T16:48:56Z">
           <params>
             <param index="0">
               <value>
@@ -40,10 +87,142 @@
             </param>
             <param index="5">
               <value>
-                <![CDATA[42956]]>
+                <![CDATA[Y]]>
               </value>
             </param>
-            <param index="6">
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNewUser -->
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult)[pri:0, instance:TestPlans.ManageUser@1a407d53]" name="TearDown" is-config="true" duration-ms="926" started-at="2017-08-21T16:48:56Z" finished-at="2017-08-21T16:48:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateNewUser status=SUCCESS method=ManageUser.CreateNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.ManageUser@1a407d53] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method status="FAIL" signature="CreateNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.ManageUser@1a407d53]" name="CreateNewUser" duration-ms="29257" started-at="2017-08-21T16:48:57Z" data-provider="CafeData" finished-at="2017-08-21T16:49:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[luke]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Skywalker]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://cafetownsend-angular-rails.herokuapp.com/login]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test@test.com.au]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Y]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Unable to Login into Cafe Townsend site....Login Failed expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Unable to Login into Cafe Townsend site....Login Failed expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertFalse(Assert.java:63)
+	at TestPlans.ManageUser.CreateNewUser(ManageUser.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNewUser -->
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult)[pri:0, instance:TestPlans.ManageUser@1a407d53]" name="TearDown" is-config="true" duration-ms="3015" started-at="2017-08-21T16:49:27Z" finished-at="2017-08-21T16:49:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateNewUser status=FAILURE method=ManageUser.CreateNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.ManageUser@1a407d53] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- TestPlans.ManageUser -->
+      <class name="TestPlans.Login">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:TestPlans.Login@3498ed]" name="BeforeClass" is-config="true" duration-ms="355" started-at="2017-08-21T16:40:50Z" finished-at="2017-08-21T16:40:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method status="FAIL" signature="InvalidUserPassword(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.Login@3498ed]" name="InvalidUserPassword" duration-ms="31694" started-at="2017-08-21T16:40:51Z" data-provider="CafeData" finished-at="2017-08-21T16:41:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Luke]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Skywalker]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://cafetownsend-angular-rails.herokuapp.com/login]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test@test.com.au]]>
+              </value>
+            </param>
+            <param index="5">
               <value>
                 <![CDATA[Y]]>
               </value>
@@ -58,7 +237,7 @@
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertTrue(Assert.java:42)
-	at TestPlans.Login.InvalidUserPassword(Login.java:81)
+	at TestPlans.Login.InvalidUserPassword(Login.java:85)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -89,18 +268,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidUserPassword -->
-        <test-method status="PASS" signature="TearDown(org.testng.ITestResult)[pri:0, instance:TestPlans.Login@22f71333]" name="TearDown" is-config="true" duration-ms="1935" started-at="2017-08-21T12:25:27Z" finished-at="2017-08-21T12:25:29Z">
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult)[pri:0, instance:TestPlans.Login@3498ed]" name="TearDown" is-config="true" duration-ms="3651" started-at="2017-08-21T16:41:23Z" finished-at="2017-08-21T16:41:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=InvalidUserPassword status=FAILURE method=Login.InvalidUserPassword(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.Login@22f71333] output={null}]]]>
+                <![CDATA[[TestResult name=InvalidUserPassword status=FAILURE method=Login.InvalidUserPassword(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.Login@3498ed] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method status="PASS" signature="LoginLogoutCafeTown(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.Login@22f71333]" name="LoginLogoutCafeTown" duration-ms="61796" started-at="2017-08-21T12:25:29Z" data-provider="CafeData" finished-at="2017-08-21T12:26:31Z">
+        <test-method status="FAIL" signature="InvalidUserPassword(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.Login@3498ed]" name="InvalidUserPassword" duration-ms="28422" started-at="2017-08-21T16:41:26Z" data-provider="CafeData" finished-at="2017-08-21T16:41:55Z">
           <params>
             <param index="0">
               <value>
@@ -129,10 +308,136 @@
             </param>
             <param index="5">
               <value>
-                <![CDATA[42956]]>
+                <![CDATA[Y]]>
               </value>
             </param>
-            <param index="6">
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[This test checks if invalid username or password throws validation. Now in this, it managed to login successfully so Incorrect Login test is not valid (Negative Scenario) expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: This test checks if invalid username or password throws validation. Now in this, it managed to login successfully so Incorrect Login test is not valid (Negative Scenario) expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at TestPlans.Login.InvalidUserPassword(Login.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidUserPassword -->
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult)[pri:0, instance:TestPlans.Login@3498ed]" name="TearDown" is-config="true" duration-ms="1487" started-at="2017-08-21T16:41:55Z" finished-at="2017-08-21T16:41:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=InvalidUserPassword status=FAILURE method=Login.InvalidUserPassword(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.Login@3498ed] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method status="PASS" signature="InvalidUserPassword(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.Login@3498ed]" name="InvalidUserPassword" duration-ms="30001" started-at="2017-08-21T16:41:56Z" data-provider="CafeData" finished-at="2017-08-21T16:42:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[luke]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Skywalker]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://cafetownsend-angular-rails.herokuapp.com/login]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test@test.com.au]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Y]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidUserPassword -->
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult)[pri:0, instance:TestPlans.Login@3498ed]" name="TearDown" is-config="true" duration-ms="700" started-at="2017-08-21T16:42:26Z" finished-at="2017-08-21T16:42:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=InvalidUserPassword status=SUCCESS method=Login.InvalidUserPassword(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.Login@3498ed] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method status="PASS" signature="LoginLogoutCafeTown(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.Login@3498ed]" name="LoginLogoutCafeTown" duration-ms="65881" started-at="2017-08-21T16:42:27Z" data-provider="CafeData" finished-at="2017-08-21T16:43:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Luke]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Skywalker]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://cafetownsend-angular-rails.herokuapp.com/login]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test@test.com.au]]>
+              </value>
+            </param>
+            <param index="5">
               <value>
                 <![CDATA[Y]]>
               </value>
@@ -141,11 +446,142 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginLogoutCafeTown -->
-        <test-method status="PASS" signature="TearDown(org.testng.ITestResult)[pri:0, instance:TestPlans.Login@22f71333]" name="TearDown" is-config="true" duration-ms="865" started-at="2017-08-21T12:26:31Z" finished-at="2017-08-21T12:26:32Z">
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult)[pri:0, instance:TestPlans.Login@3498ed]" name="TearDown" is-config="true" duration-ms="1354" started-at="2017-08-21T16:43:33Z" finished-at="2017-08-21T16:43:34Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LoginLogoutCafeTown status=SUCCESS method=Login.LoginLogoutCafeTown(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.Login@22f71333] output={null}]]]>
+                <![CDATA[[TestResult name=LoginLogoutCafeTown status=SUCCESS method=Login.LoginLogoutCafeTown(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.Login@3498ed] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method status="PASS" signature="LoginLogoutCafeTown(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.Login@3498ed]" name="LoginLogoutCafeTown" duration-ms="58978" started-at="2017-08-21T16:43:34Z" data-provider="CafeData" finished-at="2017-08-21T16:44:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Luke]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Skywalker]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://cafetownsend-angular-rails.herokuapp.com/login]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test@test.com.au]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Y]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginLogoutCafeTown -->
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult)[pri:0, instance:TestPlans.Login@3498ed]" name="TearDown" is-config="true" duration-ms="859" started-at="2017-08-21T16:44:33Z" finished-at="2017-08-21T16:44:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=LoginLogoutCafeTown status=SUCCESS method=Login.LoginLogoutCafeTown(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.Login@3498ed] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method status="FAIL" signature="LoginLogoutCafeTown(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.Login@3498ed]" name="LoginLogoutCafeTown" duration-ms="28923" started-at="2017-08-21T16:44:34Z" data-provider="CafeData" finished-at="2017-08-21T16:45:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[luke]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Skywalker]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://cafetownsend-angular-rails.herokuapp.com/login]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test@test.com.au]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Y]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Unable to Login into Cafe Townsend site....Login Failed expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Unable to Login into Cafe Townsend site....Login Failed expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertFalse(Assert.java:63)
+	at TestPlans.Login.LoginLogoutCafeTown(Login.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginLogoutCafeTown -->
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult)[pri:0, instance:TestPlans.Login@3498ed]" name="TearDown" is-config="true" duration-ms="3138" started-at="2017-08-21T16:45:03Z" finished-at="2017-08-21T16:45:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=LoginLogoutCafeTown status=FAILURE method=Login.LoginLogoutCafeTown(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPlans.Login@3498ed] output={null}]]]>
               </value>
             </param>
           </params>
@@ -153,6 +589,6 @@
           </reporter-output>
         </test-method> <!-- TearDown -->
       </class> <!-- TestPlans.Login -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Regression Test Cases -->
+  </suite> <!-- Automation Test -->
 </testng-results>
